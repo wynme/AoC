@@ -1,5 +1,5 @@
 // Necessary for compilation
-module task3_1;
+module day3_1;
 
 import std;
 import std.array : split;

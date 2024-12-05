@@ -1,4 +1,4 @@
-module task3_2;
+module day3_2;
 
 import std;
 import std.array : split;
