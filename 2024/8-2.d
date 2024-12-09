@@ -26,10 +26,10 @@ void main()
 		}
 	}
 
-	foreach (k; R.byKey) {
-		foreach (i, t1; R[k]) {
+	foreach (l; R.byValue) {
+		foreach (i, t1; l) {
 			int y1 = t1[0], x1 = t1[1];
-			foreach (t2; R[k][i + 1 .. $]) {
+			foreach (t2; l[i + 1 .. $]) {
 				int y2 = t2[0], x2 = t2[1];
 				int dy = y1 - y2, dx = x1 - x2;
 				int cy = y1, cx = x1;
