@@ -77,9 +77,7 @@ public class Main {
 		for (int i = 0; i < sum; i++) {
 			if (p1[i] != -1) ans1 += p1[i] * i;
 			if (p2[i] != -1) ans2 += p2[i] * i;
-			System.out.print((p2[i] == -1) ? "." : p2[i]);
 		}
-		System.out.println();
 		System.out.println(ans1);
 		System.out.println(ans2);
 	}

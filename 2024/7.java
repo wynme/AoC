@@ -2,7 +2,7 @@ import java.util.*;
 
 
 public class Main {
-	private static long solve1(long N, long[] rest) {
+	private static long part1(long N, long[] rest) {
 		int K = rest.length;
 		for (int bits = 0; bits < (1 << (K - 1)); bits++) {
 			long res = rest[0];
@@ -25,7 +25,7 @@ public class Main {
 		return res;
 	}
 
-	private static long solve2(long N, long[] rest) {
+	private static long part2(long N, long[] rest) {
 		int K = rest.length;
 		for (int i = 0; i < Math.pow(3, K - 1); i++) {
 			int[] b3 = base3(i, K - 1);
@@ -54,8 +54,8 @@ public class Main {
 			for (int i = 1; i < A.length; i++) {
 				rest[i - 1] = Long.parseLong(A[i].strip());
 			}
-			ans1 += solve1(N, rest);
-			ans2 += solve2(N, rest);
+			ans1 += part1(N, rest);
+			ans2 += part2(N, rest);
 		}
 		System.out.println(ans1);
 		System.out.println(ans2);
